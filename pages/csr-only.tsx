@@ -2,7 +2,8 @@ import type { NextPage } from 'next';
 import { useUser, SignOutButton, SignInButton } from '@clerk/nextjs';
 
 const CsrOnlyPage: NextPage = () => {
-  const { isLoading, isSignedIn, user } = useUser();
+  const isLoading = false;
+  const { isSignedIn, user } = useUser();
   console.log('useUser(): ', { isLoading, isSignedIn, user });
 
   return (
